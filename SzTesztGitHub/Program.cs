@@ -22,9 +22,11 @@ namespace SzTesztGitHub
             int numberInput;
             do
             {
-                WriteList(numberList);
-                Console.WriteLine("\nGive a number to add to the list: ");
+                Console.WriteLine("Give a number to add to the list: ");
                 numberInput = int.Parse(Console.ReadLine());
+
+                WriteList(numberList);
+
                 if (numberInput != 0)
                 {
                     numberList.Add(numberInput);
