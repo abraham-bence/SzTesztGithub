@@ -25,13 +25,16 @@ namespace SzTesztGitHub
                 Console.WriteLine("Give a number to add to the list: ");
                 numberInput = int.Parse(Console.ReadLine());
 
-                WriteList(numberList);
-
                 if (numberInput != 0)
                 {
                     numberList.Add(numberInput);
                 }
+                WriteList(numberList);
+                Console.WriteLine();
+
             } while (numberInput != 0);
+
+            Console.WriteLine("Min number" + numberList.Min());
 
             Console.ReadKey();
         }
