@@ -34,7 +34,7 @@ namespace SzTesztGitHub
 
             } while (numberInput != 0);
 
-            Console.WriteLine("Min number" + numberList.Min());
+            Console.WriteLine("Max number: " + numberList.Max());
 
             Console.ReadKey();
         }
