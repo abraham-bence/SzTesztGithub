@@ -8,13 +8,22 @@ namespace SzTesztGitHub
 {
     internal class Program
     {
+        static void WriteList(List<int> list)
+        {
+            Console.Write("Your list: ");
+            foreach (int i in list)
+            {
+                Console.Write(i + ", ");
+            }
+        }
         static void Main(string[] args)
         {
             List<int> numberList = new List<int>();
-            int numberInput = 0;
+            int numberInput;
             do
             {
-                Console.WriteLine("Give a number to add to the list: ");
+                WriteList(numberList);
+                Console.WriteLine("\nGive a number to add to the list: ");
                 numberInput = int.Parse(Console.ReadLine());
                 if (numberInput != 0)
                 {
@@ -22,13 +31,8 @@ namespace SzTesztGitHub
                 }
             } while (numberInput != 0);
 
-
-            //foreach (int number in numberList)
-            //{
-            //    Console.WriteLine(number);
-            //}
-
             Console.ReadKey();
         }
+        
     }
 }
